@@ -1,0 +1,38 @@
+name: Deploy Quartz Wiki
+
+on:
+  push:
+    branches:
+      - v5  # или master
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 # Quartz использует git историю для дат создания/изменения
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build Quartz
+        run: npx quartz build
+
+      - name: Deploy to VPS via Rsync
+        uses: easingthemes/ssh-deploy@v5.0.3
+        with:
+          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+          REMOTE_HOST: ${{ secrets.SSH_HOST }}
+          REMOTE_USER: ${{ secrets.SSH_USER }}
+          REMOTE_PORT: ${{ secrets.SSH_PORT }}
+          SOURCE: "public/"                   # Папка, куда quartz build собирает сайт
+          TARGET: "/opt/minecraft/web/"       # Папка на сервере, примонтированная в контейнер
+          ARGS: "-avzr --delete"              # Синхронизация с удалением старых файлов
