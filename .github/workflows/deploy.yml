@@ -3,7 +3,7 @@ name: Deploy Quartz Wiki
 on:
   push:
     branches:
-      - main  # или master
+      - v5  # или master
 
 jobs:
   build-and-deploy:
