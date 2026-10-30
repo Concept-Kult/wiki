@@ -2,7 +2,7 @@
 configuration:
   pageTitle: Cult Wiki
   pageTitleSuffix: ""
-  enableSPA: true
+  enableSPA: false
   enablePopovers: true
   analytics:
     provider: plausible
