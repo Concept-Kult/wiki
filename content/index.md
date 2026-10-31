@@ -25,8 +25,13 @@ title: Главная
   </div>
   <span class="hud-divider">/</span>
   <div class="hud-item">
-    <span class="hud-label">BORDER:</span>
-    <span class="hud-value">±15,000</span>
+    <span class="hud-label">SLOTS:</span>
+    <span class="hud-value">32</span>
+  </div>
+  <span class="hud-divider">/</span>
+  <div class="hud-item">
+    <span class="hud-label">ALLOCATION:</span>
+    <span class="hud-value">6G RAM</span>
   </div>
   <span class="hud-divider">/</span>
   <div class="hud-item">
