@@ -6,40 +6,50 @@ const NotFound: QuartzComponent = ({ cfg, ctx }: QuartzComponentProps) => {
 
   return (
     <article class="popover-hint">
-      <h1>404: Страница не найдена</h1>
-      <p>
-        <strong>Балбес, ты куда вообще попал?!</strong>
-      </p>
-      <p>
-        Кажется, ты активировал сломанный портал, оступился на краю Энда или эту страницу
-        сгрыз взбесившийся крипер. В базе знаний <code>mc.concept-cult.cz</code> такого места не существует (или Клим просто забыл его написать).
-      </p>
+      <div class="hud-terminal" style="margin-top: 2rem;">
+        <div class="hud-item">
+          <span style="display:inline-block;width:7px;height:7px;border-radius:50%;background:#ef4444;box-shadow:0 0 8px rgba(239,68,68,0.7);"></span>
+          <span class="hud-label">TELEMETRY_ALERT:</span>
+          <span class="hud-accent">SECTOR_NOT_FOUND</span>
+        </div>
+        <span class="hud-divider">/</span>
+        <div class="hud-item">
+          <span class="hud-label">CODE:</span>
+          <span class="hud-value">404</span>
+        </div>
+      </div>
+
+      <h1>404 // СБОЙ МАРШРУТИЗАЦИИ СЕКТОРА</h1>
 
       <blockquote class="callout danger" data-callout="danger">
         <div class="callout-title">
-          <div class="callout-icon"></div>
-          <div class="callout-title-inner">
-            <p>Вы погибли в пустоте</p>
-          </div>
+          <span>CRITICAL: COORDINATE RESOLUTION FAILURE</span>
         </div>
         <div class="callout-content">
           <p>
-            <strong>Совет:</strong> никогда не копай прямо под себя и проверяй правильность введённого URL.
+            Запрошенный узел координат не зарегистрирован в базе данных кластера <code>mc.concept-cult.cz</code>. 
+            Возможно, пространственный маяк был деактивирован, сектор перемещён в закрытый архив или ссылка повреждена.
           </p>
         </div>
       </blockquote>
 
-      <p>
-        Что можно сделать:
+      <p style="font-family: var(--codeFont); font-size: 0.84rem; color: var(--text-muted); margin: 1.5rem 0;">
+        ПРОТОКОЛ ВОССТАНОВЛЕНИЯ СВЯЗИ:
       </p>
-      <ul>
-        <li>
-          🏠 <a href={baseDir} class="internal">Телепортироваться на главную страницу (Спавн)</a>
-        </li>
-        <li>
-          💬 <a href="https://discord.gg/Ez3y9hqa8" class="external">Зайти в Discord</a> и спросить у админов, куда подевалась страница
-        </li>
-      </ul>
+
+      <div style="display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 2rem;">
+        <a href={baseDir} class="coord-tag" style="font-size: 0.8rem; padding: 0.5rem 1rem; color: #ededed !important; border-color: var(--accent-technical) !important;">
+          [← RECONNECT // ROOT_GATEWAY]
+        </a>
+        <a href="https://discord.gg/Ez3y9hqa8" target="_blank" rel="noopener noreferrer" class="coord-tag" style="font-size: 0.8rem; padding: 0.5rem 1rem;">
+          [DISCORD_DISPATCH // REPORT_ISSUE ↗]
+        </a>
+      </div>
+
+      <div class="spec-footer">
+        <div><span>TRACE_ID: ERR_UNRESOLVED_ROUTE</span></div>
+        <div><span>CLUSTER: CONCEPT_CULT_NODE_01</span></div>
+      </div>
 
       <script
         dangerouslySetInnerHTML={{

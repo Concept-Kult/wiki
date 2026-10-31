@@ -16,30 +16,30 @@ configuration:
     fontOrigin: googleFonts
     cdnCaching: true
     typography:
-      header: Andika
+      header: Space Grotesk
       body: Inter
-      code: Jetbrains Mono
+      code: JetBrains Mono
     colors:
       lightMode:
         light: "#faf8f8"
         lightgray: "#e5e5e5"
         gray: "#b8b8b8"
-        darkgray: "#4e4e4e"
-        dark: "#2b2b2b"
-        secondary: "#284b63"
-        tertiary: "#84a59d"
-        highlight: rgba(143, 159, 169, 0.15)
-        textHighlight: "#fff23688"
+        darkgray: "#2e2e34"
+        dark: "#121216"
+        secondary: "#d94e34"
+        tertiary: "#e5a93c"
+        highlight: rgba(217, 78, 52, 0.1)
+        textHighlight: "#e5a93c44"
       darkMode:
-        light: "#161618"
-        lightgray: "#393639"
-        gray: "#646464"
-        darkgray: "#d4d4d4"
-        dark: "#ebebec"
-        secondary: "#7b97aa"
-        tertiary: "#84a59d"
-        highlight: rgba(143, 159, 169, 0.15)
-        textHighlight: "#b3aa0288"
+        light: "#0A0A0C"
+        lightgray: "#4D4D60"
+        gray: "#8A8A99"
+        darkgray: "#EDEDED"
+        dark: "#FFFFFF"
+        secondary: "#D94E34"
+        tertiary: "#E5A93C"
+        highlight: rgba(217, 78, 52, 0.15)
+        textHighlight: "#e5a93c33"
 plugins:
   - source: "@quartz-community/created-modified-date"
     enabled: true
@@ -164,6 +164,34 @@ plugins:
       priority: 50
   - source: "@quartz-community/graph"
     enabled: true
+    options:
+      localGraph:
+        drag: true
+        zoom: true
+        depth: 2
+        scale: 1.1
+        repelForce: 0.5
+        centerForce: 0.3
+        linkDistance: 45
+        fontSize: 0.65
+        opacityScale: 1
+        showTags: false
+        removeTags: []
+        focusOnHover: false
+      globalGraph:
+        drag: true
+        zoom: true
+        depth: -1
+        scale: 0.9
+        repelForce: 0.5
+        centerForce: 0.2
+        linkDistance: 45
+        fontSize: 0.65
+        opacityScale: 1
+        showTags: false
+        removeTags: []
+        focusOnHover: true
+        enableRadial: true
     layout:
       position: right
       priority: 10
