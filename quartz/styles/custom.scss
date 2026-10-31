@@ -3,8 +3,188 @@
   opacity: 1 !important;
 }
 
-/* Ensure CSS variable resolves properly for canvas JS */
-:root {
-  --gray: #888888 !important; /* Forces a solid mid-gray for unhovered links */
-  --lightgray: #888888 !important;
+/* ==========================================================================
+   Concept Cult Wiki - Custom Styles
+   ========================================================================== */
+
+/* Серверный баннер (Hero Block) */
+.hero-banner {
+  background: linear-gradient(135deg, rgba(40, 75, 99, 0.2) 0%, rgba(132, 165, 157, 0.1) 100%);
+  border: 1px solid var(--secondary);
+  border-radius: 14px;
+  padding: 1.5rem 1.75rem;
+  margin: 1.5rem 0 2rem 0;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+
+  .hero-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-bottom: 0.75rem;
+
+    h3 {
+      margin: 0;
+      font-size: 1.35rem;
+      color: var(--dark);
+    }
+  }
+
+  .hero-pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    margin-top: 1rem;
+  }
+
+  .pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    background: rgba(125, 125, 125, 0.12);
+    border: 1px solid rgba(125, 125, 125, 0.25);
+    padding: 0.4rem 0.85rem;
+    border-radius: 8px;
+    font-size: 0.88rem;
+    font-weight: 600;
+    color: var(--dark);
+    text-decoration: none !important;
+    transition: all 0.15s ease;
+
+    &:hover {
+      background: rgba(125, 125, 125, 0.25);
+      border-color: var(--secondary);
+      transform: translateY(-1px);
+    }
+
+    code {
+      background: transparent;
+      padding: 0;
+      color: var(--secondary);
+      font-weight: 700;
+    }
+  }
+}
+
+/* Сетка карточек модификаций */
+.mod-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.25rem;
+  margin: 1.25rem 0 2.5rem 0;
+}
+
+/* Карточка мода */
+.mod-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: rgba(125, 125, 125, 0.08);
+  border: 1px solid rgba(125, 125, 125, 0.18);
+  border-radius: 12px;
+  padding: 1.25rem;
+  text-decoration: none !important;
+  color: inherit !important;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+
+  &:hover {
+    transform: translateY(-3px);
+    border-color: var(--secondary);
+    background: rgba(125, 125, 125, 0.14);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  }
+
+  .card-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.6rem;
+  }
+
+  .card-icon {
+    font-size: 1.5rem;
+    line-height: 1;
+  }
+
+  .card-title {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin: 0 0 0.5rem 0;
+    color: var(--secondary);
+  }
+
+  .card-desc {
+    font-size: 0.92rem;
+    line-height: 1.5;
+    color: var(--darkgray);
+    margin: 0 0 1rem 0;
+    flex-grow: 1;
+  }
+
+  .card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid rgba(125, 125, 125, 0.15);
+    padding-top: 0.75rem;
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: var(--tertiary);
+  }
+}
+
+/* Цветные теги категорий */
+.badge {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding: 0.25rem 0.6rem;
+  border-radius: 6px;
+  line-height: 1;
+
+  &.badge-tech {
+    background: rgba(59, 130, 246, 0.18);
+    color: #60a5fa;
+    border: 1px solid rgba(59, 130, 246, 0.3);
+  }
+
+  &.badge-magic {
+    background: rgba(168, 85, 247, 0.18);
+    color: #c084fc;
+    border: 1px solid rgba(168, 85, 247, 0.3);
+  }
+
+  &.badge-combat {
+    background: rgba(239, 68, 68, 0.18);
+    color: #f87171;
+    border: 1px solid rgba(239, 68, 68, 0.3);
+  }
+
+  &.badge-food {
+    background: rgba(245, 158, 11, 0.18);
+    color: #fbbf24;
+    border: 1px solid rgba(245, 158, 11, 0.3);
+  }
+
+  &.badge-storage {
+    background: rgba(16, 185, 129, 0.18);
+    color: #34d399;
+    border: 1px solid rgba(16, 185, 129, 0.3);
+  }
+
+  &.badge-world {
+    background: rgba(6, 182, 212, 0.18);
+    color: #22d3ee;
+    border: 1px solid rgba(6, 182, 212, 0.3);
+  }
+
+  &.badge-economy {
+    background: rgba(234, 179, 8, 0.18);
+    color: #facc15;
+    border: 1px solid rgba(234, 179, 8, 0.3);
+  }
 }

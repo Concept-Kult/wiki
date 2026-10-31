@@ -11,4 +11,4 @@ title: leopalladium
 ---
 
 > [!question] Хотите дополнить профиль?
-> [✏️ Редактировать на GitHub](https://github.com/Concept-Kult/wiki/edit/v5/content/leopalladium.md) · [💬 Написать в Discord](https://discord.gg/Ez3y9hqa8)
+> [✏️ Редактировать на GitHub](https://github.com/Concept-Kult/wiki/edit/v5/content/community/leopalladium.md) · [💬 Написать в Discord](https://discord.gg/Ez3y9hqa8)

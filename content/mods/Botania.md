@@ -42,4 +42,4 @@ title: Botania
 ---
 
 > [!question] Нашли неточность или хотите дополнить гайд?
-> [✏️ Редактировать страницу на GitHub](https://github.com/Concept-Kult/wiki/edit/v5/content/Botania.md) · [💬 Обсудить в Discord](https://discord.gg/Ez3y9hqa8)
+> [✏️ Редактировать страницу на GitHub](https://github.com/Concept-Kult/wiki/edit/v5/content/mods/Botania.md) · [💬 Обсудить в Discord](https://discord.gg/Ez3y9hqa8)

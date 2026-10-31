@@ -1,49 +1,213 @@
 ---
 title: Главная
 ---
-## Привет!
-Меня зовут [Клим](leopalladium.md) и я рад приветствовать вас в руководстве к нашему серверу! Вики активно дополняется.
 
-> [!tip] Данные для подключения
-> - **Адрес сервера:** `mc.concept-cult.cz`
-> - **Версия игры:** `1.20.1` (Forge)
-> - **Discord сообщества:** [discord.gg/Ez3y9hqa8](https://discord.gg/Ez3y9hqa8)
+<div class="hero-banner">
+  <div class="hero-header">
+    <h3>⚔️ Добро пожаловать на Concept Cult</h3>
+    <span class="badge badge-world">1.20.1 Forge</span>
+  </div>
+  <p style="margin: 0; color: var(--darkgray);">
+    Около-РП сервер с кинетической инженерией, цветочной магией, честной рыночной экономикой и живым миром. Отдыхайте, стройте заводы, варите супы и открывайте свои магазины!
+  </p>
+  <div class="hero-pills">
+    <span class="pill">🌐 IP: <code>mc.concept-cult.cz</code></span>
+    <a href="https://discord.gg/Ez3y9hqa8" target="_blank" rel="noopener noreferrer" class="pill">💬 Discord сообщества</a>
+    <a href="https://github.com/Concept-Kult/mc-client-modpack/releases" target="_blank" rel="noopener noreferrer" class="pill">📦 Скачать модпак</a>
+    <a href="./server/rules" class="pill">📜 Правила сервера</a>
+  </div>
+</div>
 
-## О чём наш сервер?
-Concept Cult и его Minecraft сервер — прежде всего площадка для того, чтобы веселиться и отдыхать! Это около-РП (role play) сервер с магией, экономикой, политикой и кучей технических модов. Но, перед тем как испугаться, я хочу Вас успокоить и сказать, что всё в порядке и можно делать всё, что душе вздумается! Можно стать чернокнижником, знахарем, поваром, да вообще кем угодно и играть так, как хочется, но невозможно в реальной жизни.
+## ⚙️ Модификации сборки
 
-## Подготовка к игре
-Чтобы всё было хорошо и удобно работало, наша [команда](team.md) бережно и заботливо собирала модпак.
+<div class="mod-grid">
 
-> [!info] Что такое моды и модпак?
-> Чтобы добавить новый контент в оригинальный (Vanilla) Minecraft, сообщество игроков создаёт модификации (**моды**), а **модпак** — готовый комплект таких модификаций. 
-> Главная цель таких комплектов — добавить новый контент, изменить или добавить новые геймплейные механики.
+  <a href="./mods/Create" class="mod-card">
+    <div class="card-top">
+      <span class="card-icon">⚙️</span>
+      <span class="badge badge-tech">Инженерия</span>
+    </div>
+    <div class="card-title">Create</div>
+    <div class="card-desc">
+      Кинетическая энергия, шестерёнки, конвейеры, поезда и автоматические буровые комплексы. Честная физика без скучных проводов.
+    </div>
+    <div class="card-footer">
+      <span>Читать гайд</span>
+      <span>→</span>
+    </div>
+  </a>
 
-Забегая немного вперёд, в наш модпак входят много разных модов, главные из которых:
+  <a href="./mods/Botania" class="mod-card">
+    <div class="card-top">
+      <span class="card-icon">🌸</span>
+      <span class="badge badge-magic">Магия</span>
+    </div>
+    <div class="card-title">Botania</div>
+    <div class="card-desc">
+      Цветочная автоматизация, энергия маны, бассейны и волшебные артефакты. Скармливай ромашкам торты и сокрушай врагов силой флоры.
+    </div>
+    <div class="card-footer">
+      <span>Читать гайд</span>
+      <span>→</span>
+    </div>
+  </a>
 
-* [[Create]] — кинетическая энергия, шестерёнки, конвейеры и безумная инженерия. Хочешь автоматический мясокомбинат, шахтёрский поезд-бур или ветряную мельницу размером с гору? Тебе точно сюда.
-* [[Twilight Forest]] — Сумеречный лес, легендарная классика. Выкопал яму 2х2 с водой, обсадил цветочками, кинул алмаз — и полетел ломать лица Наге, Личу и Гидре в бесконечных лабиринтах.
-* [[Tinker's Construct]] — кастомная металлургия и оружие. Никаких скучных ванильных мечей: плавь металлы в огромной печи, отливай детали и собирай тесаки с ручкой из соплей (слизи), лезвием из кобальта и адским уроном.
-* [[Farmer's Delight]] — кулинарный рай для тех, кому надоело жевать сухую жареную свинину. Новые культуры, сковородки, кастрюли, нарезка продуктов и возможность угостить друзей борщом или пельменями.
-  > «Ебейшая дерьмина, чёрт возьми! Он сделал факинг говядина веллингтон, этот парень знает как заставить вкусовые сосочки сходить с ума от кайфа!» — *Рордон Гамзи*
-* [[Botania]] — техническая магия на цветах. Никаких скучных проводов: только лютики-ромашки, мана-бассейны, волшебные кольца и магниты. Скармливай цветам уголь или торты, получай ману и разваливай недругов.
-* [[Occultism]] — ритуалы, пентаграммы и призыв духов. Помнишь, как в детстве вызывали Пиковую Даму? Тут всё по-взрослому: чертишь круг мелом, призываешь духов-демонов, которые таскают руду, плавят слитки и охраняют базу.
-* [[Tom's Simple Storage]] — беспроводная складская система для тех, у кого дёргается глаз от 40 сундуков с землей и палками. Ставишь один терминал, тянешь кабели ко всем сундукам и ищешь любые вещи через строку поиска за секунду.
-* [[Sophisticated Storage]] — сундуки и бочки на стероидах. Апгрейд от дерева до незерита, гигантская вместимость, встроенные магниты, фильтры и авто-сортировка, чтобы на базе всегда был идеальный порядок.
-* [[economy|Lightman's Currency (Экономика)]] — монеты, банкоматы, кошельки и торговые автоматы. Подробно описано в статье [[economy]].
+  <a href="./mods/Tinker's-Construct" class="mod-card">
+    <div class="card-top">
+      <span class="card-icon">⚔️</span>
+      <span class="badge badge-combat">Кузница</span>
+    </div>
+    <div class="card-title">Tinker's Construct</div>
+    <div class="card-desc">
+      Полноценная металлургия: плавильная печь, литьё сплавов и кастомное оружие с уникальными свойствами каждого материала.
+    </div>
+    <div class="card-footer">
+      <span>Читать гайд</span>
+      <span>→</span>
+    </div>
+  </a>
+
+  <a href="./mods/Twilight-Forest" class="mod-card">
+    <div class="card-top">
+      <span class="card-icon">🌲</span>
+      <span class="badge badge-world">Измерение</span>
+    </div>
+    <div class="card-title">Twilight Forest</div>
+    <div class="card-desc">
+      Легендарный Сумеречный Лес: пошаговая прогрессия боссов (Нага, Лич, Гидра), опасные лабиринты и тонны ценных артефактов.
+    </div>
+    <div class="card-footer">
+      <span>Читать гайд</span>
+      <span>→</span>
+    </div>
+  </a>
+
+  <a href="./mods/Farmer's-Delight" class="mod-card">
+    <div class="card-top">
+      <span class="card-icon">🍳</span>
+      <span class="badge badge-food">Кулинария</span>
+    </div>
+    <div class="card-title">Farmer's Delight</div>
+    <div class="card-desc">
+      Сковороды, кастрюли, нарезка продуктов и блюда высокой кухни. Сложная еда даёт долгие баффы насыщения и регенерации.
+    </div>
+    <div class="card-footer">
+      <span>Читать гайд</span>
+      <span>→</span>
+    </div>
+  </a>
+
+  <a href="./mods/Occultism" class="mod-card">
+    <div class="card-top">
+      <span class="card-icon">🕯</span>
+      <span class="badge badge-magic">Ритуалы</span>
+    </div>
+    <div class="card-title">Occultism</div>
+    <div class="card-desc">
+      Мел, пентаграммы и вызов духов-демонов. Призывай бесов для удвоения руды, авто-плавки и беспроводного доступа к ресурсам.
+    </div>
+    <div class="card-footer">
+      <span>Читать гайд</span>
+      <span>→</span>
+    </div>
+  </a>
+
+  <a href="./mods/Tom's-Simple-Storage" class="mod-card">
+    <div class="card-top">
+      <span class="card-icon">📦</span>
+      <span class="badge badge-storage">Хранилище</span>
+    </div>
+    <div class="card-title">Tom's Simple Storage</div>
+    <div class="card-desc">
+      Объедини стену сундуков в единый терминал с мгновенным поиском вещей и встроенной сеткой крафта 3х3.
+    </div>
+    <div class="card-footer">
+      <span>Читать гайд</span>
+      <span>→</span>
+    </div>
+  </a>
+
+  <a href="./mods/Sophisticated-Storage" class="mod-card">
+    <div class="card-top">
+      <span class="card-icon">🗄</span>
+      <span class="badge badge-storage">Сундуки+</span>
+    </div>
+    <div class="card-title">Sophisticated Storage</div>
+    <div class="card-desc">
+      Сундуки и бочки от дерева до незерита. Апгрейды стаков до 1024 штук, встроенные магниты, авто-сортировка и покраска.
+    </div>
+    <div class="card-footer">
+      <span>Читать гайд</span>
+      <span>→</span>
+    </div>
+  </a>
+
+</div>
 
 ---
 
-## Как начать играть за 4 шага:
-1. Скачать любимый лаунчер (мы рекомендуем [Prism Launcher](https://prismlauncher.org/) или запуск через CurseForge).
-2. *(Опционально)* Если вы играете не через CurseForge, установите **Forge** версии `1.20.1` (версия указана в Release Note).
-3. Скачать наш модпак: [mc-client-modpack Releases](https://github.com/Concept-Kult/mc-client-modpack/releases) (всегда скачивайте с тегом `latest`).
-4. Распаковать в папку `.minecraft`, запустить игру и ввести адрес сервера `mc.concept-cult.cz`.
+## 🎮 Геймплей и Сервер
+
+<div class="mod-grid">
+
+  <a href="./server/economy" class="mod-card">
+    <div class="card-top">
+      <span class="card-icon">💰</span>
+      <span class="badge badge-economy">Экономика</span>
+    </div>
+    <div class="card-title">Рынок и Торговля</div>
+    <div class="card-desc">
+      Монеты от меди до незерита, авто-кошельки, банкоматы на спавне и возможность открыть собственный магазин.
+    </div>
+    <div class="card-footer">
+      <span>Подробнее об экономике</span>
+      <span>→</span>
+    </div>
+  </a>
+
+  <a href="./server/rules" class="mod-card">
+    <div class="card-top">
+      <span class="card-icon">📜</span>
+      <span class="badge badge-combat">Порядок</span>
+    </div>
+    <div class="card-title">Правила сервера</div>
+    <div class="card-desc">
+      Базовые принципы комфортной игры: уважение, честная игра, защита построек и бережное отношение к серверному TPS.
+    </div>
+    <div class="card-footer">
+      <span>Читать правила</span>
+      <span>→</span>
+    </div>
+  </a>
+
+  <a href="./community/team" class="mod-card">
+    <div class="card-top">
+      <span class="card-icon">👑</span>
+      <span class="badge badge-tech">Команда</span>
+    </div>
+    <div class="card-title">О создателях</div>
+    <div class="card-desc">
+      Люди, которые заварили эту кашу: создатели проекта, сборщики модпака и администраторы сервера.
+    </div>
+    <div class="card-footer">
+      <span>Познакомиться</span>
+      <span>→</span>
+    </div>
+  </a>
+
+</div>
 
 ---
 
-## Нашли опечатку или хотите помочь писать Вики?
-База знаний открыта для предложений сообщества:
-* **Если есть аккаунт GitHub:** [✏️ Редактировать эту страницу на GitHub](https://github.com/Concept-Kult/wiki/edit/v5/content/index.md) (откроется редактор, вносите правку и нажимайте *Propose changes*).
-* **Если нет GitHub:** напишите нам в [Discord сообщества](https://discord.gg/Ez3y9hqa8) в канал `#предложения-и-баги`.
-* Подробное руководство по оформлению статей читайте в [[contributing]].
+## 🚀 Как начать играть:
+1. **Лаунчер:** скачайте оригинальный лаунчер, [Prism Launcher](https://prismlauncher.org/) или используйте CurseForge.
+2. **Загрузчик:** убедитесь, что установлен **Forge 1.20.1** (версия 47.4.28).
+3. **Модпак:** скачайте сборку [mc-client-modpack Releases](https://github.com/Concept-Kult/mc-client-modpack/releases) (с тегом `latest`).
+4. **Вход:** распакуйте файлы в директорию `.minecraft`, запускайте игру и подключайтесь к `mc.concept-cult.cz`!
+
+---
+
+> [!question] Нашли опечатку или хотите дополнить Вики?
+> - **Есть GitHub:** [✏️ Редактировать эту страницу на GitHub](https://github.com/Concept-Kult/wiki/edit/v5/content/index.md)
+> - **Нет GitHub:** напишите нам в [Discord сообщества](https://discord.gg/Ez3y9hqa8)
+> - Руководство для авторов: [[community/contributing|Руководство по внесению правок]]

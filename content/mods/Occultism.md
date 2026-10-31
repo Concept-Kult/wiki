@@ -38,4 +38,4 @@ title: Occultism
 ---
 
 > [!question] Нашли неточность или хотите дополнить гайд?
-> [✏️ Редактировать страницу на GitHub](https://github.com/Concept-Kult/wiki/edit/v5/content/Occultism.md) · [💬 Обсудить в Discord](https://discord.gg/Ez3y9hqa8)
+> [✏️ Редактировать страницу на GitHub](https://github.com/Concept-Kult/wiki/edit/v5/content/mods/Occultism.md) · [💬 Обсудить в Discord](https://discord.gg/Ez3y9hqa8)
