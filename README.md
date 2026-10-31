@@ -1,17 +1,48 @@
-# Quartz v5
+# Concept Cult — Minecraft Wiki & Portal
 
-> “[One] who works with the door open gets all kinds of interruptions, but [they] also occasionally gets clues as to what the world is and what might be important.” — Richard Hamming
+Официальная база знаний и информационный портал сервера **Concept Cult Minecraft**.
 
-Quartz is a set of tools that helps you publish your [digital garden](https://jzhao.xyz/posts/networked-thought) and notes as a website for free.
+Сайт доступен по адресу: [https://mc.concept-cult.cz](https://mc.concept-cult.cz)
 
-🔗 Read the documentation and get started: https://quartz.jzhao.xyz/
+---
 
-[Join the Discord Community](https://discord.gg/cRFFHYye7t)
+## 🚀 Быстрый старт для работы с контентом
 
-## Sponsors
+Весь контент хранится в формате Markdown в папке `content/`.
 
-<p align="center">
-  <a href="https://github.com/sponsors/jackyzha0">
-    <img src="https://cdn.jsdelivr.net/gh/jackyzha0/jackyzha0/sponsorkit/sponsors.svg" />
-  </a>
-</p>
+### Вариант 1: Через Obsidian (Рекомендуется)
+1. Установите [Obsidian](https://obsidian.md/).
+2. Выберите **Open folder as vault** (Открыть папку как хранилище).
+3. Укажите папку `content/` из этого репозитория.
+4. Создавайте и редактируйте заметки с поддержкой двусторонних ссылок `[[Страница]]`, тегов и картинок.
+
+### Вариант 2: Локальный предпросмотр в браузере
+Требуется **Node.js >= 22** и **npm >= 10.9.2**:
+
+```bash
+# Установка зависимостей (один раз)
+npm install
+
+# Запуск локального сервера предпросмотра
+npx quartz build --serve
+```
+
+После запуска сайт будет доступен по адресу: `http://localhost:8080`. При изменении любых файлов в `content/` страницы обновляются автоматически.
+
+---
+
+## 🔄 Автоматический деплой
+
+При каждом пуше в ветку `v5` срабатывает **GitHub Actions** (`.github/workflows/deploy.yml`):
+1. Собирает статический сайт (`npx quartz build`).
+2. Доставляет файлы по SSH (Rsync) на боевой сервер в `/opt/minecraft/web/`.
+3. Изменения моментально появляются на `mc.concept-cult.cz`.
+
+---
+
+## 📁 Структура проекта
+
+- `content/` — ваши статьи, страницы модов, гайды и лор сервера.
+- `quartz.config.yaml` — настройки сайта (название, домен, тема, шрифты, плагины).
+- `quartz/styles/custom.scss` — пользовательские стили CSS/SCSS.
+- `.github/workflows/deploy.yml` — пайплайн автоматического деплоя на сервер.
