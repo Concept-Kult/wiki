@@ -230,8 +230,8 @@ plugins:
     enabled: true
     options:
       links:
-        GitHub: https://github.com/jackyzha0/quartz
-        Discord Community: https://discord.gg/cRFFHYye7t
+        GitHub: https://github.com/Concept-Kult/wiki
+        Discord: https://discord.gg/Ez3y9hqa8
     layout:
       position: footer
       priority: 50
