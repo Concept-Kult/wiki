@@ -33,14 +33,12 @@ title: Биржевой радар & Рынок
 
 ## 🔍 ПОИСК ПО ТЕРМИНАЛУ
 
-<div style="margin: 1.5rem 0;">
+<div class="market-search-box">
   <input 
     type="text" 
     id="market-search-input" 
-    placeholder="ВВЕДИТЕ НАЗВАНИЕ ПРЕДМЕТА, НИК ПРОДАВЦА ИЛИ КООРДИНАТЫ..." 
-    style="width: 100%; max-width: 650px; background: #15181E; border: 1px solid #232832; color: #F0F2F5; padding: 0.75rem 1rem; border-radius: 2px; font-family: var(--codeFont), monospace; font-size: 0.85rem; outline: none; transition: border-color 0.15s ease;"
-    onfocus="this.style.borderColor='#E0633C'"
-    onblur="this.style.borderColor='#232832'"
+    class="market-search-input"
+    placeholder="ПОИСК: НАЗВАНИЕ, ПРОДАВЕЦ, XYZ..." 
   />
 </div>
 
@@ -159,11 +157,11 @@ title: Биржевой радар & Рынок
         var html = '';
         filteredItems.forEach(function(item) {
           html += '<tr>' +
-            '<td><b style="color: #F0F2F5;">' + item.item_name + '</b><br><span style="font-family: var(--codeFont); font-size: 0.72rem; color: #5c6475;">' + item.item_id + '</span></td>' +
-            '<td><span class="coord-tag">' + item.seller + '</span><br><span style="font-size: 0.76rem; color: #8C95A5;">' + item.shop_name + '</span></td>' +
+            '<td><b style="color: var(--text-heading);">' + item.item_name + '</b><br><span style="font-family: var(--codeFont); font-size: 0.72rem; color: var(--text-muted);">' + item.item_id + '</span></td>' +
+            '<td><span class="coord-tag">' + item.seller + '</span><br><span style="font-size: 0.76rem; color: var(--text-desc);">' + item.shop_name + '</span></td>' +
             '<td><code style="font-size: 0.78rem;">' + item.coords + '</code></td>' +
-            '<td><span style="font-weight: 600; color: #F0F2F5;">' + item.stock + '</span></td>' +
-            '<td><span style="color: #E0633C; font-weight: 700; font-family: var(--codeFont);">' + item.price_str + '</span></td>' +
+            '<td><span style="font-weight: 600; color: var(--text-heading);">' + item.stock + '</span></td>' +
+            '<td><span style="color: var(--accent-technical); font-weight: 700; font-family: var(--codeFont);">' + item.price_str + '</span></td>' +
           '</tr>';
         });
         itemsBody.innerHTML = html;
@@ -185,13 +183,13 @@ title: Биржевой радар & Рынок
         var oHtml = '';
         filteredOutlets.forEach(function(o) {
           var isReady = o.status === 'АКТИВЕН';
-          var badgeColor = isReady ? '#10b981' : '#E5A93C';
+          var badgeColor = isReady ? '#10b981' : 'var(--accent-amber)';
           var badgeBg = isReady ? 'rgba(16, 185, 129, 0.15)' : 'rgba(229, 169, 60, 0.15)';
 
           oHtml += '<tr>' +
-            '<td><b style="color: #F0F2F5;">' + o.name + '</b></td>' +
+            '<td><b style="color: var(--text-heading);">' + o.name + '</b></td>' +
             '<td><span class="coord-tag">' + o.owner + '</span></td>' +
-            '<td><span style="font-size: 0.8rem; color: #A0ABC0;">' + o.type + '</span></td>' +
+            '<td><span style="font-size: 0.8rem; color: var(--tag-text);">' + o.type + '</span></td>' +
             '<td><code style="font-size: 0.78rem;">' + o.coords + '</code></td>' +
             '<td><span style="display: inline-block; font-family: var(--codeFont); font-size: 0.7rem; font-weight: 700; padding: 0.15rem 0.45rem; border-radius: 2px; color: ' + badgeColor + '; background: ' + badgeBg + '; border: 1px solid ' + badgeColor + '44;">' + o.status + ' (' + o.trades_count + ' СЛОТОВ)</span></td>' +
           '</tr>';

@@ -2,24 +2,61 @@
    Concept Cult - Industrial Blueprint (Терракота / Медь + Графит)
    ========================================================================== */
 
-:root {
+:root,
+:root[saved-theme="light"] {
   --radius-s: 2px;
   --radius-m: 2px;
   --radius-l: 2px;
 
+  /* Светлая тема (Industrial Blueprint Light / Architectural Drafting) */
+  --bg-primary: #F8F9FA;
+  --bg-secondary: #FFFFFF;
+  --bg-tertiary: #F1F3F5;
+  --divider-color: #E2E5E9;
+  --divider-hover: #CBD0D8;
+  --accent-technical: #D94E34; /* Терракота / медь */
+  --accent-amber: #D9822B;    /* Янтарный телеметрии */
+  --text-heading: #12151A;     /* Глубокий темный графит для заголовков */
+  --text-desc: #495057;        /* Читаемый графитовый сланец для основного текста */
+  --text-muted: #868E96;       /* Приглушенные технические лейблы */
+  --tag-bg: #F1F3F5;
+  --tag-border: #D0D5DD;
+  --tag-text: #495057;
+  --card-hover-bg: #F8F9FA;
+  --hud-bg: #F1F3F5;
+  --hud-border: #E2E5E9;
+  --hud-label: #868E96;
+  --input-bg: #FFFFFF;
+  --input-border: #D0D5DD;
+  --input-text: #12151A;
+  --table-header-border: #CBD0D8;
+}
+
+:root[saved-theme="dark"] {
+  /* Темная тема (Industrial Blueprint Dark / Slate Graphite) */
   --bg-primary: #0E1013;
   --bg-secondary: #15181E;
+  --bg-tertiary: #1C1F28;
   --divider-color: #232832;
   --divider-hover: #3B4354;
-  --accent-technical: #E0633C; /* приглушенная медь / терракота */
-  --accent-amber: #E5A93C;    /* янтарный телеметрии */
-  --text-heading: #F0F2F5;    /* текст заголовков */
-  --text-desc: #8C95A5;       /* текст описаний */
+  --accent-technical: #E0633C; /* Приглушенная медь / терракота */
+  --accent-amber: #E5A93C;    /* Янтарный телеметрии */
+  --text-heading: #F0F2F5;     /* Светлый текст заголовков */
+  --text-desc: #8C95A5;        /* Приглушенный сланец */
+  --text-muted: #5C6475;
   --tag-bg: #1C1F28;
   --tag-border: #2E3444;
   --tag-text: #A0ABC0;
+  --card-hover-bg: #1A1E26;
+  --hud-bg: #15181E;
+  --hud-border: #232832;
+  --hud-label: #5C6475;
+  --input-bg: #15181E;
+  --input-border: #232832;
+  --input-text: #F0F2F5;
+  --table-header-border: #333946;
 
-  /* Гарантированная яркость линий графа */
+  /* Гарантированная яркость линий графа в темной теме */
   --lightgray: #8C95A5 !important;
   --gray: #E0633C !important;
 }
@@ -30,7 +67,7 @@
 .graph > .graph-outer {
   border: 1px solid var(--divider-color) !important;
   background-color: var(--bg-secondary) !important;
-  border-radius: 2px !important;
+  border-radius: var(--radius-s) !important;
 }
 
 .graph-container,
@@ -43,6 +80,11 @@
 /* --------------------------------------------------------------------------
    Typography & Base Overrides
    -------------------------------------------------------------------------- */
+html, body {
+  overflow-x: hidden;
+  max-width: 100%;
+}
+
 body {
   background-color: var(--bg-primary) !important;
   color: var(--text-desc) !important;
@@ -65,7 +107,7 @@ a {
   transition: color 0.15s ease;
 
   &:hover {
-    color: #f2825c;
+    color: var(--accent-amber);
   }
 }
 
@@ -74,7 +116,7 @@ a.tag, .coord-tag {
   background: var(--tag-bg) !important;
   border: 1px solid var(--tag-border) !important;
   color: var(--tag-text) !important;
-  border-radius: 2px !important;
+  border-radius: var(--radius-s) !important;
   font-family: var(--codeFont), monospace !important;
   font-size: 0.72rem !important;
   letter-spacing: 0.04em;
@@ -95,7 +137,7 @@ a.tag, .coord-tag {
   background-color: var(--bg-secondary) !important;
   border: 1px solid var(--divider-color) !important;
   border-left: 3px solid var(--accent-technical) !important;
-  border-radius: 2px !important;
+  border-radius: var(--radius-s) !important;
   margin: 1.25rem 0 !important;
   padding: 0.85rem 1.15rem !important;
 
@@ -143,7 +185,7 @@ table {
 
 th {
   background-color: transparent !important;
-  border-bottom: 1px solid #333946 !important;
+  border-bottom: 1px solid var(--table-header-border) !important;
   font-family: var(--codeFont), monospace;
   font-size: 0.74rem;
   text-transform: uppercase;
@@ -167,9 +209,9 @@ td {
   flex-wrap: wrap;
   align-items: center;
   gap: 0.75rem 1.25rem;
-  background: var(--bg-secondary);
-  border: 1px solid var(--divider-color);
-  border-radius: 2px;
+  background: var(--hud-bg);
+  border: 1px solid var(--hud-border);
+  border-radius: var(--radius-s);
   padding: 0.65rem 1rem;
   font-family: var(--codeFont), monospace;
   font-size: 0.76rem;
@@ -183,7 +225,7 @@ td {
     gap: 0.45rem;
 
     .hud-label {
-      color: #5c6475;
+      color: var(--hud-label);
     }
 
     .hud-value {
@@ -207,7 +249,7 @@ td {
   }
 
   .hud-divider {
-    color: #232832;
+    color: var(--divider-color);
     user-select: none;
   }
 
@@ -233,7 +275,7 @@ td {
   gap: 1px;
   background: var(--divider-color);
   border: 1px solid var(--divider-color);
-  border-radius: 2px;
+  border-radius: var(--radius-s);
   margin: 1.25rem 0 2.5rem 0;
   overflow: hidden;
 }
@@ -249,7 +291,7 @@ td {
   transition: all 0.15s ease;
 
   &:hover {
-    background: #1a1e26;
+    background: var(--card-hover-bg);
     outline: 1px solid var(--divider-hover);
     z-index: 1;
 
@@ -283,7 +325,7 @@ td {
     border: 1px solid var(--tag-border);
     color: var(--tag-text);
     padding: 0.12rem 0.45rem;
-    border-radius: 2px;
+    border-radius: var(--radius-s);
     font-size: 0.68rem;
     text-transform: uppercase;
   }
@@ -324,11 +366,57 @@ td {
 }
 
 /* --------------------------------------------------------------------------
+   Market Radar Input & Controls (Поиск по биржевому терминалу)
+   -------------------------------------------------------------------------- */
+.market-search-box {
+  margin: 1.5rem 0;
+  width: 100%;
+  max-width: 650px;
+  box-sizing: border-box;
+}
+
+.market-search-input {
+  box-sizing: border-box !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  background: var(--input-bg) !important;
+  border: 1px solid var(--input-border) !important;
+  color: var(--input-text) !important;
+  padding: 0.75rem 1rem !important;
+  border-radius: var(--radius-s) !important;
+  font-family: var(--codeFont), monospace !important;
+  font-size: 0.85rem !important;
+  outline: none !important;
+  transition: border-color 0.15s ease, background-color 0.15s ease, color 0.15s ease !important;
+
+  &:focus {
+    border-color: var(--accent-technical) !important;
+  }
+
+  &::placeholder {
+    color: var(--text-muted) !important;
+    opacity: 0.8;
+  }
+}
+
+@media all and (max-width: 800px) {
+  .market-search-box {
+    max-width: 100% !important;
+    margin: 1rem 0 !important;
+  }
+
+  .market-search-input {
+    font-size: 0.8rem !important;
+    padding: 0.65rem 0.85rem !important;
+  }
+}
+
+/* --------------------------------------------------------------------------
    Git-style Changelog
    -------------------------------------------------------------------------- */
 .commit-log {
   border: 1px solid var(--divider-color);
-  border-radius: 2px;
+  border-radius: var(--radius-s);
   background: var(--bg-secondary);
   font-family: var(--codeFont), monospace;
   font-size: 0.8rem;

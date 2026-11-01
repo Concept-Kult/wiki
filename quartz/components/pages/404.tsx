@@ -38,7 +38,7 @@ const NotFound: QuartzComponent = ({ cfg, ctx }: QuartzComponentProps) => {
       </p>
 
       <div style="display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 2rem;">
-        <a href={baseDir} class="coord-tag" style="font-size: 0.8rem; padding: 0.5rem 1rem; color: #ededed !important; border-color: var(--accent-technical) !important;">
+        <a href={baseDir} class="coord-tag" style="font-size: 0.8rem; padding: 0.5rem 1rem; color: var(--text-heading) !important; border-color: var(--accent-technical) !important;">
           [← RECONNECT // ROOT_GATEWAY]
         </a>
         <a href="https://discord.gg/Ez3y9hqa8" target="_blank" rel="noopener noreferrer" class="coord-tag" style="font-size: 0.8rem; padding: 0.5rem 1rem;">
