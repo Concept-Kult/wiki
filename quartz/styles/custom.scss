@@ -91,6 +91,41 @@ body {
   letter-spacing: -0.01em;
 }
 
+/* Гарантированный единый фон страницы без визуальных разрывов и ступеней */
+#quartz-root,
+.page,
+#quartz-body,
+.page > #quartz-body,
+.page > #quartz-body > .center,
+.page > #quartz-body > .center > article,
+.page > #quartz-body > footer,
+.page > #quartz-body > .sidebar,
+.page > #quartz-body > .sidebar.left,
+.page > #quartz-body > .sidebar.right,
+.center,
+footer {
+  background: transparent !important;
+  background-color: transparent !important;
+}
+
+/* Выравнивание сетки и ширины центральной колонки и футера */
+.page > #quartz-body > .center {
+  grid-column: 2 !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  box-sizing: border-box !important;
+}
+
+.page > #quartz-body > footer {
+  grid-column: 2 !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  min-width: 0 !important;
+  box-sizing: border-box !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+
 h1, h2, h3, h4, h5, h6 {
   color: var(--text-heading) !important;
   font-weight: 700;
@@ -109,6 +144,17 @@ a {
   &:hover {
     color: var(--accent-amber);
   }
+}
+
+/* Строгие разделители */
+hr {
+  box-sizing: border-box !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  border: none !important;
+  height: 1px !important;
+  background-color: var(--divider-color) !important;
+  margin: 2rem 0 !important;
 }
 
 /* Строгие моноширинные теги-координаты */
@@ -134,6 +180,9 @@ a.tag, .coord-tag {
 
 /* Технические карточки Callout */
 .callout {
+  box-sizing: border-box !important;
+  width: 100% !important;
+  max-width: 100% !important;
   background-color: var(--bg-secondary) !important;
   border: 1px solid var(--divider-color) !important;
   border-left: 3px solid var(--accent-technical) !important;
