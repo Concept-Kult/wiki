@@ -35,4 +35,4 @@ jobs:
           REMOTE_PORT: ${{ secrets.SSH_PORT }}
           SOURCE: "public/"                   # Папка, куда quartz build собирает сайт
           TARGET: "/opt/minecraft/web/"       # Папка на сервере, примонтированная в контейнер
-          ARGS: "-avzr --delete"              # Синхронизация с удалением старых файлов
+          ARGS: "-avzr --delete --exclude='market.json'"              # Синхронизация с удалением старых файлов
