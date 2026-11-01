@@ -109,21 +109,40 @@ footer {
 }
 
 /* Выравнивание сетки и ширины центральной колонки и футера */
-.page > #quartz-body > .center {
-  grid-column: 2 !important;
-  width: 100% !important;
-  max-width: 100% !important;
-  box-sizing: border-box !important;
+@media all and (min-width: 801px) {
+  .page > #quartz-body > .center {
+    grid-column: 2 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  .page > #quartz-body > footer {
+    grid-column: 2 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    box-sizing: border-box !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
 }
 
-.page > #quartz-body > footer {
-  grid-column: 2 !important;
-  width: 100% !important;
-  max-width: 100% !important;
-  min-width: 0 !important;
-  box-sizing: border-box !important;
-  margin-left: 0 !important;
-  margin-right: 0 !important;
+@media all and (max-width: 800px) {
+  .page > #quartz-body > .center {
+    grid-column: 1 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  .page > #quartz-body > footer {
+    grid-column: 1 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    box-sizing: border-box !important;
+  }
 }
 
 /* --------------------------------------------------------------------------
@@ -147,8 +166,25 @@ footer {
   box-shadow: none !important;
 }
 
-/* В мобильном drawer выезжающего меню фон строго соответствует текущей теме */
+/* Переключение видимости: на десктопе только текст "Проводник", на мобильном только бургер */
+button.mobile-explorer {
+  display: none !important;
+}
+
+button.desktop-explorer {
+  display: flex !important;
+}
+
 @media all and (max-width: 800px) {
+  button.mobile-explorer {
+    display: flex !important;
+  }
+
+  button.desktop-explorer {
+    display: none !important;
+  }
+
+  /* В мобильном drawer выезжающего меню фон строго соответствует текущей теме */
   .explorer .explorer-content {
     background-color: var(--bg-primary) !important;
   }
@@ -184,7 +220,6 @@ button.mobile-explorer {
   line-height: 1.5 !important;
   padding: 0.25rem 0 0.35rem 0 !important;
   margin: 0 !important;
-  display: flex !important;
   align-items: center !important;
   overflow: visible !important;
 
