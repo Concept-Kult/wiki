@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - v5  # или master
+  workflow_dispatch:
 
 jobs:
   build-and-deploy:
@@ -36,4 +37,4 @@ jobs:
           SOURCE: "public/"                   # Папка, куда quartz build собирает сайт
           TARGET: "/opt/minecraft/web/"       # Папка на сервере, примонтированная в контейнер
           EXCLUDE: "market.json"
-          ARGS: "-avzr --delete"              # Синхронизация с удалением старых файлов
+          ARGS: "-rlztv --no-owner --no-group --omit-dir-times --delete"
