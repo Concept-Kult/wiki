@@ -126,6 +126,102 @@ footer {
   margin-right: 0 !important;
 }
 
+/* --------------------------------------------------------------------------
+   Explorer (Проводник) Styling & Fixes
+   -------------------------------------------------------------------------- */
+
+/* Единый цвет фона для выпадающего меню Проводника (как основной фон страницы в темной и светлой теме) */
+.explorer,
+.explorer-content,
+.explorer.nav-files-container,
+.nav-files-container,
+.explorer-ul,
+.folder-outer,
+.folder-container,
+.page > #quartz-body .sidebar.left:has(.explorer),
+.page > div#quartz-body div.sidebar.left:has(.explorer),
+.page > div#quartz-body div.sidebar.left .explorer .explorer-content,
+.page > #quartz-body .sidebar.left .explorer .explorer-content {
+  background: transparent !important;
+  background-color: transparent !important;
+  box-shadow: none !important;
+}
+
+/* В мобильном drawer выезжающего меню фон строго соответствует текущей теме */
+@media all and (max-width: 800px) {
+  .explorer .explorer-content {
+    background-color: var(--bg-primary) !important;
+  }
+}
+
+/* Исправление обрезки заголовка "Проводник" при сворачивании */
+.explorer {
+  min-height: auto !important;
+  overflow: visible !important;
+}
+
+.explorer.collapsed {
+  flex: 0 0 auto !important;
+  height: auto !important;
+  min-height: auto !important;
+  max-height: none !important;
+  overflow: visible !important;
+  overflow-y: visible !important;
+
+  /* На десктопе скрываем контент без обрезки заголовка */
+  @media all and (min-width: 801px) {
+    & > .explorer-content {
+      display: none !important;
+    }
+  }
+}
+
+/* Кнопка-заголовок "Проводник" с правильным line-height, отступами и без обрезки букв */
+button.desktop-explorer,
+button.mobile-explorer {
+  height: auto !important;
+  min-height: 2rem !important;
+  line-height: 1.5 !important;
+  padding: 0.25rem 0 0.35rem 0 !important;
+  margin: 0 !important;
+  display: flex !important;
+  align-items: center !important;
+  overflow: visible !important;
+
+  h2 {
+    font-size: 1.15rem !important;
+    line-height: 1.5 !important;
+    margin: 0 !important;
+    padding: 0 0.25rem 0.15rem 0 !important;
+    display: inline-block !important;
+    vertical-align: middle !important;
+    overflow: visible !important;
+    color: var(--text-heading) !important;
+  }
+
+  svg.fold {
+    margin-left: 0.5rem !important;
+    flex-shrink: 0 !important;
+    vertical-align: middle !important;
+    transition: transform 0.2s ease !important;
+  }
+}
+
+/* Hover-эффекты элементов дерева на чистом фоне */
+.explorer-content ul li > a,
+.folder-container div > button,
+.folder-container div > a {
+  border-radius: var(--radius-s);
+  transition: background-color 0.15s ease, color 0.15s ease;
+  padding: 0.15rem 0.4rem !important;
+}
+
+.explorer-content ul li > a:hover,
+.folder-container div > button:hover,
+.folder-container div > a:hover {
+  background-color: var(--card-hover-bg) !important;
+}
+
 h1, h2, h3, h4, h5, h6 {
   color: var(--text-heading) !important;
   font-weight: 700;
