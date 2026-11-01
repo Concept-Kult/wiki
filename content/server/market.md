@@ -33,12 +33,13 @@ title: Биржевой радар & Рынок
 
 ## 🔍 ПОИСК ПО ТЕРМИНАЛУ
 
-<div class="market-search-box">
+<div class="market-search-box" style="box-sizing: border-box !important; width: 100% !important; max-width: 100% !important; margin: 1.25rem 0 !important; overflow: hidden !important;">
   <input 
     type="text" 
     id="market-search-input" 
     class="market-search-input"
     placeholder="ПОИСК: НАЗВАНИЕ, ПРОДАВЕЦ, XYZ..." 
+    style="box-sizing: border-box !important; width: 100% !important; max-width: 100% !important; display: block !important; margin: 0 !important; -webkit-appearance: none !important; appearance: none !important;"
   />
 </div>
 

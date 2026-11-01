@@ -369,16 +369,21 @@ td {
    Market Radar Input & Controls (Поиск по биржевому терминалу)
    -------------------------------------------------------------------------- */
 .market-search-box {
-  margin: 1.5rem 0;
-  width: 100%;
-  max-width: 650px;
-  box-sizing: border-box;
-}
-
-.market-search-input {
-  box-sizing: border-box !important;
+  margin: 1.25rem 0 !important;
   width: 100% !important;
   max-width: 100% !important;
+  box-sizing: border-box !important;
+  overflow: hidden !important;
+}
+
+#market-search-input,
+.market-search-input,
+.market-search-box input {
+  box-sizing: border-box !important;
+  display: block !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  margin: 0 !important;
   background: var(--input-bg) !important;
   border: 1px solid var(--input-border) !important;
   color: var(--input-text) !important;
@@ -387,10 +392,13 @@ td {
   font-family: var(--codeFont), monospace !important;
   font-size: 0.85rem !important;
   outline: none !important;
+  -webkit-appearance: none !important;
+  appearance: none !important;
   transition: border-color 0.15s ease, background-color 0.15s ease, color 0.15s ease !important;
 
   &:focus {
     border-color: var(--accent-technical) !important;
+    box-shadow: 0 0 0 1px var(--accent-technical) !important;
   }
 
   &::placeholder {
@@ -401,11 +409,12 @@ td {
 
 @media all and (max-width: 800px) {
   .market-search-box {
-    max-width: 100% !important;
     margin: 1rem 0 !important;
   }
 
-  .market-search-input {
+  #market-search-input,
+  .market-search-input,
+  .market-search-box input {
     font-size: 0.8rem !important;
     padding: 0.65rem 0.85rem !important;
   }
