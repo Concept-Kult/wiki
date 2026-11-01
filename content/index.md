@@ -35,6 +35,10 @@ title: Главная
   </div>
   <span class="hud-divider">/</span>
   <div class="hud-item">
+    <a href="./server/market" class="hud-link" style="color: var(--accent-technical); font-weight: 700;">📡 MARKET_RADAR [LIVE] ↗</a>
+  </div>
+  <span class="hud-divider">/</span>
+  <div class="hud-item">
     <a href="https://discord.gg/Ez3y9hqa8" target="_blank" rel="noopener noreferrer" class="hud-link">DISCORD_UPLINK ↗</a>
   </div>
   <div class="hud-item">
@@ -179,9 +183,24 @@ title: Главная
 
 <div class="sector-grid">
 
+  <a href="./server/market" class="sector-card">
+    <div class="sector-meta-bar">
+      <span class="sector-code">OPS-01 // TELEMETRY</span>
+      <span class="sector-tag">LIVE_RADAR</span>
+    </div>
+    <div class="sector-name">Биржевой радар цен и лотов</div>
+    <div class="sector-desc">
+      Интерактивный сканер торговых автоматов мира в реальном времени. Поиск товаров, реестр торговых точек и навигация по координатам.
+    </div>
+    <div class="sector-footer">
+      <span>REF: /SERVER/MARKET</span>
+      <span class="sector-action">INSPECT →</span>
+    </div>
+  </a>
+
   <a href="./server/economy" class="sector-card">
     <div class="sector-meta-bar">
-      <span class="sector-code">OPS-01 // FISCAL</span>
+      <span class="sector-code">OPS-02 // FISCAL</span>
       <span class="sector-tag">LIGHTMAN_CURRENCY</span>
     </div>
     <div class="sector-name">Экономика & Валютный рынок</div>
